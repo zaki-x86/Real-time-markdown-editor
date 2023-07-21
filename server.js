@@ -8,9 +8,15 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 // routes for app
+// home page
 app.get('/', function(req, res) {
     res.render('pad');
 });
+
+// document id
+app.get('/(:id)', function(req, res) {
+    res.render('pad');
+  });
 
 // get sharejs dependencies
 var sharejs = require('share');

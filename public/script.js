@@ -27,9 +27,16 @@ window.onload = function() {
 
     pad.addEventListener('input', convertTextAreaToMarkdown);
 
+    // checks path, if homepage, it ignores it
     // keeps text area in sync with all other users
-    sharejs.open('home', 'text', function(error, doc) {
-        doc.attach_textarea(pad);
-        convertTextAreaToMarkdown();
-    });
+    if(document.location.pathname > 1) {
+        let documentName = document.location.pathname.substring(1); // removes `/` from path
+        sharejs.open(documentName, 'text', function(error, doc) {
+            doc.attach_textarea(pad);
+            convertTextAreaToMarkdown();
+        }); 
+    }
+
+    // convert on page load
+    convertTextAreaToMarkdown();
 };
