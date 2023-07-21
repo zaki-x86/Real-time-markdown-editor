@@ -1,0 +1,23 @@
+{
+  "name": "real-time-markdown-editor",
+  "version": "1.0.0",
+  "description": "Real time markdown editor with express and sharejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaki-x86/realtime-markdown-editor.git"
+  },
+  "author": "M Zaki",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaki-x86/realtime-markdown-editor/issues"
+  },
+  "homepage": "https://github.com/zaki-x86/realtime-markdown-editor#readme"
+}
